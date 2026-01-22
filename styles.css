@@ -1,0 +1,561 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: start;
+  font-family: "Antonio", sans-serif;
+}
+
+nav {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 20px;
+  grid-column: 1;
+  position: relative;
+}
+
+.site-nav {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.sidebar {
+  /*width: 180px;
+  height: 100vh;
+  background-color: transparent;
+  color: black;
+  box-sizing: border-box;*/
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.page-content {
+  grid-column: 2;
+  padding: 40px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+.hamburger {
+  width: 26px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #dad4d4;
+  border-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+
+  body {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .sidebar li {
+    margin: 0;
+  }
+
+  .detail-view {
+    grid-column: 1 / -1;
+  }
+
+  .description {
+    grid-column: 1 / -1;
+  }
+
+  .gallery {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+  }
+
+  .sidebar {
+    position: fixed;
+    inset: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    display: none;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    display: flex;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / -1;
+  }
+
+  .detail-view {
+    grid-column: 1 / -1;
+  }
+
+  .description {
+    grid-column: 1 / -1;
+  }
+
+}
+
+@media (pointer: coarse) {
+  .slide-prev::before,
+  .slide-next::before {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.description {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.detail-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;        /* space between arrows */
+  margin-top: 50px;
+}
+
+.detail-prev,
+.detail-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.6s ease;
+  z-index: 15;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.detail-prev {
+  position: relative;
+  right: 20px;
+}
+
+.detail-next {
+  position: relative;
+  left: 20px;
+}
+
+.detail-prev::before,
+.detail-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.gallery-item:hover .gallery__img {
+  opacity: 0.5;
+}
+
+.caption {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+/*.gallery__img:hover{
+    opacity: 0.5;
+}*/
+
+/*
+
+/*.logo {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30px;
+  left: 60px;
+  transition: transform 1s ease-in-out;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}*/
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+label {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button{
+  background: none;
+  border: 1px solid #000;
+  padding: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.container2 {
+  border-radius: 6px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  min-width: 350px;
+}
+
+.form-status{
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.form-status.success,
+.form-status.error{
+  opacity: 1;
+}
+
+.form-status.success{
+  color: green;
+}
+
+.form-status.error{
+  color: red;
+}
+
+/*.mail {
+  width: 40px;
+  position: absolute;
+  left: 48%;
+  margin-top: 20px;
+}
+
+.insta {
+  width: 35px;
+  position: absolute;
+  left: 55%;
+  margin-top: 22px;
+}*/
+
+/*slideshow*/
+
+* {
+  box-sizing: border-box
+}
+
+.detail-view {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 500px;
+  /* Adjust this value as needed */
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mySlides img.loaded{
+  opacity: 1;
+}
+
+.media-video {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  display: block;
+  background: #000000;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.media-video.ready {
+  opacity: 1;
+}
+
+
+.slide-prev,
+.slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.6s ease;
+  z-index: 15;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+  opacity: 1;
+}
+
+.slide-prev {
+  left: -48px;
+}
+
+.slide-next {
+  right: -48px;
+}
+
+.slide-prev::before,
+.slide-next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 3=20px;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+.vid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 1000px;
+}
+
+
+.inconsolata-bodyfont {
+  font-family: "Inconsolata", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.antonio {
+  font-family: "Antonio", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+.formsub {
+  display: block;
+  margin-top: 150px;
+  margin-right: 200px;
+}
+
+/*.private {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  padding: 10px;
+  color: rgb(212, 212, 212);
+} */
+
+a {
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+}

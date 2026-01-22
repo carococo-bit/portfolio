@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="site-nav">
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="sidebar">
+            <li><a href="index.html">Sculpture</a></li>
+            <li><a href="painting.html">Painting</a></li>
+            <li><a href="photographs.html">Photography/Video</a></li>
+            <li> <a href="performance.html">Performance</a> </li>
+            <li> <a href="about.html">About</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
+    <main class="detail-view">
+        <div id="media" class="slideshow-container"></div>
+        <div class="titlework">
+            <h3 id="title"></h3>
+            <p id="desc"></p>
+        </div>
+        <div class="detail-nav">
+            <button class="detail-prev" aria-label="Previous work">‹</button>
+            <button class="detail-next" aria-label="Next work">›</button>
+        </div>
+    </main>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
