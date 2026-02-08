@@ -195,6 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: "Object, performance, photographs. Work in progress.",
       images: [
         "images/laptop1.jpg",
+        "images/laptop2.jpg",
       ]
     },
     photograms: {
