@@ -49,6 +49,20 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/do_you_have_a_bird.jpg",
       ]
     },
+    glass: {
+      type: "slideshow",
+      title: "Eve and the forbidden fruit, Glass, 2024",
+      description: "Seven glass objects, blown by hand, three of which can be illuminated.",
+      images: [
+        "images glass/cherry.jpg",
+        "images glass/apple.jpg",
+        "images glass/tomato.jpg",
+        "images glass/raspberry.jpg",
+        "images glass/banana.jpg",
+        "images glass/cigarette.jpg",
+        "images glass/self.jpg",
+      ]
+    },
     vapeme: {
       type: "slideshow",
       title: "Vape Me, 2023",
@@ -262,13 +276,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "images radiops/radiops10.jpeg",
       ]
     },
-    breakfast: {
+    /*breakfast: {
       type: "video",
       title: "Breakfast, Performance with Sabine Pierce Jones and Dani Castro, 2025",
       description: "",
       video: "videos/Performance_breakfast_short.mp4",
       poster: "images/breakfast_thumb.jpg"
-    },
+    },*/
     printed: {
       type: "video",
       title: "Printed, Performance, 2025",
