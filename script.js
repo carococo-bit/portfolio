@@ -189,6 +189,14 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/tammey.jpg",
       ]
     },*/
+    laptop: {
+      type: "slideshow",
+      title: "Laptop & Mousesuit, Scans of 35mm negatives, 2026",
+      description: "Object, performance, photographs. Work in progress.",
+      images: [
+        "images/laptop1.jpg",
+      ]
+    },
     photograms: {
       type: "slideshow",
       title: "Altarpiece with Baby, Photograms, 2025",
