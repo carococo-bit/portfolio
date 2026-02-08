@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/me_two.jpg",
       ]
     },
-    portraits: {
+    /*portraits: {
       type: "slideshow",
       title: "Portraits of a Conteporary Woman/Testaments of a Modern Corpse, Gelatin silver prints, 2025",
       description: "",
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
       images: [
         "images/tammey.jpg",
       ]
-    },
+    },*/
     photograms: {
       type: "slideshow",
       title: "Altarpiece with Baby, Photograms, 2025",
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/photograms.jpg",
       ]
     },
-    gywhaa: {
+    /*gywhaa: {
       type: "slideshow",
       title: "Glad You Were Here At All, Digital photographs, 2024",
       description: "",
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "images windows/windows4.jpg",
         "images windows/windows5.jpg",
       ]
-    },
+    },*/
     wullenwebersteg: {
       type: "video",
       title: "Wullenwebersteg, Virtual Reality, In collaboration with Carlota Alvarez, 2025-",
